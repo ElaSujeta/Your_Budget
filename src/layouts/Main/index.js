@@ -1,11 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {
-    HashRouter,
     Route,
     Switch
 } from 'react-router-dom';
-import { Navigation } from "../../Components/Navigation";
-import { Header } from "../../Components/Header";
+import { Navigation } from "../../components/Navigation";
+import { Header } from "../../components/Header";
 import routes from "../../routes";
 
 export const Main = () => {

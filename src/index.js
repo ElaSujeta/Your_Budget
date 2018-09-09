@@ -1,20 +1,28 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import {
     Route,
     HashRouter,
 } from 'react-router-dom';
+import { createStore } from 'redux';
 
+import { Main } from './layouts/Main/';
+import rootReducer from './reducers';
 import registerServiceWorker from './registerServiceWorker';
 
-import {Main} from "./layouts/Main/";
+const store = createStore(
+    rootReducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 class App extends Component {
     render() {
         return(
-            <HashRouter>
-                <Route path='/' component={Main}/>
-            </HashRouter>
+            <Provider store={ store }>
+                <HashRouter>
+                    <Route path='/' component={ Main }/>
+                </HashRouter>
+            </Provider>
         )
     }
 }
