@@ -1,17 +1,9 @@
-import React, {Component} from 'react';
+import { connect } from 'react-redux';
 
-import "./podsumowanie.css"
+import { Podsumowanie as PodsumowanieComponent } from './Podsumowanie';
 
-export const Podsumowanie = () => {
+const mapStateToProps = (state, ownProps) => ({
+    income: state.income,
+});
 
-    return (
-        <div>
-            <div className= 'podsumowanie-chart'>tutaj będzie wykres kołowy z danych po prawej</div>
-            <div className= 'podsumowanie-info'>
-                <div>Dochody: </div>
-                <div>Wydatki: </div>
-                <div>Razem: </div>
-            </div>
-        </div>
-    )
-};
+export const Podsumowanie = connect(mapStateToProps)(PodsumowanieComponent);

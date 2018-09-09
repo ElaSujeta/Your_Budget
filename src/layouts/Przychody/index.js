@@ -1,9 +1,5 @@
-import React, {Component} from 'react';
+import { connect } from 'react-redux';
 
+import { Przychody as PrzychodyComponent } from './Przychody';
 
-export const Przychody = () => {
-
-    return (
-        <div>tutaj będą przychody</div>
-    )
-};
+export const Przychody = connect()(PrzychodyComponent);
