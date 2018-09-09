@@ -1,0 +1,9 @@
+
+.main-nav {
+    text-transform: uppercase;
+}
+
+.main-nav-link {
+    text-decoration: none;
+    margin-left: 15px;
+}
