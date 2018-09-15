@@ -16,4 +16,14 @@ export const decreaseIncome = (amount) => ({
     amount,
 });
 
+export const decreaseSpendings = (amount) => ({
+    type: REMOVE_SPENDING,
+    amount,
+});
+
+export const increaseSpendings = (amount) => ({
+    type: ADD_SPENDING,
+    amount,
+});
+
 

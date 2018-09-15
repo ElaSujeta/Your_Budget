@@ -1,7 +1,7 @@
 import { NotFound } from './layouts/NotFound';
 import { Podsumowanie } from './layouts/Podsumowanie';
 import { Przychody } from './layouts/Przychody';
-import { Wydatki } from './layouts/Wydatki';
+import { Wydatki } from './layouts/Wydatki/';
 import { Budgety } from './layouts/Budżety';
 import { Wykresy } from './layouts/Wykresy';
 

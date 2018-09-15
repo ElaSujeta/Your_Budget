@@ -15,6 +15,9 @@ import { INCREASE_INCOME, DECREASE_INCOME } from "../actions";
 const currentMonth = moment().format('MMMM');
 
 export default function (state = {}, action) {
+
+    console.log(state);
+
     if (!state.hasOwnProperty(currentMonth)) {
         state[currentMonth] = 0;
     }

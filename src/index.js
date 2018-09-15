@@ -1,3 +1,5 @@
+import moment from 'moment/moment';
+import 'moment/locale/pl';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -10,6 +12,8 @@ import { createStore } from 'redux';
 import { Main } from './layouts/Main/';
 import rootReducer from './reducers';
 import registerServiceWorker from './registerServiceWorker';
+
+moment.locale('pl');
 
 const store = createStore(
     rootReducer,

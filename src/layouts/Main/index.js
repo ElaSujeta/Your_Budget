@@ -3,9 +3,10 @@ import {
     Route,
     Switch
 } from 'react-router-dom';
-import { Navigation } from "../../components/Navigation";
-import { Header } from "../../components/Header";
+import { Navigation } from "../../Components/Navigation";
+import { Header } from "../../Components/Header";
 import routes from "../../routes";
+import {ChooseCategory} from "../KategorieWydatki/KategorieWydatki";
 
 export const Main = () => {
     const mappedRoutes = routes.map((route, index) => (
@@ -19,6 +20,7 @@ export const Main = () => {
             <Switch>
                 { mappedRoutes }
             </Switch>
+            <Route path='/spendingsCategory' component={ ChooseCategory }/>
         </div>
     )
 };
